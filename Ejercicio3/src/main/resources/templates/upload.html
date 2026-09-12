@@ -25,6 +25,8 @@
 <body>
     <h1>Subir Afiche</h1>
 
+    <div th:if="${error}" class="warning" th:text="${error}"></div>
+
     <div class="movie-info">
         <p><strong>Pelicula:</strong> <span th:text="${pelicula.nombre}"></span></p>
         <p><strong>Género:</strong> <span th:text="${pelicula.genero}"></span></p>
@@ -40,7 +42,7 @@
               th:action="@{/upload/{id}(id=${pelicula.id})}"
               enctype="multipart/form-data">
             <label for="afiche">Seleccionar archivo:</label>
-            <input type="file" name="afiche" id="afiche" accept="*/*" required>
+            <input type="file" name="afiche" id="afiche" accept="image/png, image/jpeg" required>
             <br><br>
             <button type="submit">Subir afiche</button>
         </form>

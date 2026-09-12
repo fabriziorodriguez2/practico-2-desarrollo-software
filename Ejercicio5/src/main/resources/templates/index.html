@@ -73,11 +73,9 @@
     <!-- Post-login info -->
     <div th:if="${loginSuccess}">
         <div class="info-box">
-            <strong>&#128203; Datos de la cuenta (ejercicio):</strong>
+            <strong>&#128203; Sesion iniciada correctamente.</strong>
             <br><br>
-            &#9656; Password cifrada:
-            <div class="code" th:text="${encryptedPassword}"></div>
-            <br>
+            La contrasenia se almacena como hash BCrypt (irreversible) y nunca se muestra.
         </div>
     </div>
 </div>
