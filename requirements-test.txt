@@ -1,0 +1,4 @@
+-r Ejercicio1/requirements.txt
+-r Ejercicio2/requirements.txt
+pytest==8.3.5
+requests==2.32.5
